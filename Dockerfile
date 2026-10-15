@@ -6,7 +6,7 @@
 # credentials or prepare the volume before the server starts. This copies the
 # static binary out of that image onto a small Alpine base and keeps everything
 # else upstream's.
-ARG CODDY_VERSION=1.1.32
+ARG CODDY_VERSION=1.3.14
 FROM ghcr.io/coddy-project/coddy-agent:${CODDY_VERSION} AS upstream
 
 FROM alpine:3.22

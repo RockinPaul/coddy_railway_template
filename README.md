@@ -10,7 +10,7 @@ Railway with its sessions and workspace on a volume, behind a generated password
 
 | Service | Base | Public | Role |
 |---|---|---|---|
-| `coddy` | `alpine:3.22` + `coddy` 1.1.32 | **yes** | The whole agent: web UI, `/v1/*` API, scheduler, sessions. |
+| `coddy` | `alpine:3.22` + `coddy` 1.3.14 | **yes** | The whole agent: web UI, `/v1/*` API, scheduler, sessions. |
 
 One service, one volume, no gateway. `coddy serve` runs every subsystem in one process, and the
 image is 57 MB because upstream ships a static Go binary.
@@ -94,9 +94,10 @@ files written before the swap were there afterwards, and the sign-in still worke
 
 ## Known limits
 
-The published image is built **without** the `gateway` build tag, so the Telegram gateway is not
-available in this template; it needs an image built with `BUILD_TAGS` including `gateway`. The
-swarm relay and scheduler are present and configured from `config.yaml`.
+The published image is built with the `http`, `scheduler`, `ui`, `memory`, `cli`, `gateway` and
+`swarm` build tags (upstream's `docker-build-push.yaml`), so the Telegram gateway, the swarm relay
+and the scheduler are all compiled in; each is switched on from `config.yaml`. An earlier version of
+this README said the gateway was missing, which was not the case.
 
 ## Upgrading
 

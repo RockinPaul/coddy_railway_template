@@ -55,7 +55,7 @@ start without them.
 ### Deployment Dependencies
 
 - Upstream project: [coddy-project/coddy-agent](https://github.com/coddy-project/coddy-agent) (MIT), image
-  `ghcr.io/coddy-project/coddy-agent:1.1.32`.
+  `ghcr.io/coddy-project/coddy-agent:1.3.14`.
 - Upstream documentation: [coddy-project/coddy-agent docs](https://github.com/coddy-project/coddy-agent/tree/main/docs).
 - Template source: [RockinPaul/coddy_railway_template](https://github.com/RockinPaul/coddy_railway_template) (MIT).
 
