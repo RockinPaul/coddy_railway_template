@@ -10,7 +10,7 @@ Railway with its sessions and workspace on a volume, behind a generated password
 
 | Service | Base | Public | Role |
 |---|---|---|---|
-| `coddy` | `alpine:3.22` + `coddy` 1.3.14 | **yes** | The whole agent: web UI, `/v1/*` API, scheduler, sessions. |
+| `coddy` | `alpine:3.22` + `coddy` 1.3.63 | **yes** | The whole agent: web UI, `/v1/*` API, scheduler, sessions. |
 
 One service, one volume, no gateway. `coddy serve` runs every subsystem in one process, and the
 image is 57 MB because upstream ships a static Go binary.
